@@ -1,3 +1,21 @@
+"""
+Скрипт объединяет выписки ideabank.by и убирает лишние поля.
+
+Объединять выписки необходимо, потому что банк позволяет генерировать выписки только за 3 месяца. Выходит, что за год генерировать необходимо 4 выписки. 
+Затем необходимо отфильтровать ненужные строки и объединенные ячейки.
+
+## Usage
+```sh
+pipenv run python ideabank-statement-merge.py *.xlsx
+```
+
+## Dependencies
+```sh
+apt install -yq pipenv
+```
+
+"""
+
 import sys
 import openpyxl
 import datetime
